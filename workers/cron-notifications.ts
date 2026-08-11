@@ -29,8 +29,8 @@ export default {
     
     // Example logic to fetch users and compute Personal Day Number
     const today = new Date();
-    const currentDay = today.getDate();
-    const currentMonth = today.getMonth() + 1; // 1-12
+    const currentDay = today.getUTCDate();
+    const currentMonth = today.getUTCMonth() + 1; // 1-12
     
     // In a real scenario, you'd iterate over all subscriptions in KV
     // For now, we simulate pulling a single subscription with a Mulank
@@ -38,8 +38,12 @@ export default {
     // for (const key of subscriptions.keys) {
     //   const userData = await env.PUSH_SUBSCRIPTIONS.get(key.name, "json");
     //   const mulank = userData.mulank;
-    //   const personalDay = reduceToSingleDigit(currentDay + currentMonth + mulank);
-    //   // Send Web Push (Requires a WebPush library or fetch request to push service)
+    //   
+    //   // Personal Day logic: (Day + Month + Mulank) % 9 || 9
+    //   let personalDay = (currentDay + currentMonth + mulank) % 9;
+    //   if (personalDay === 0) personalDay = 9;
+    //
+    //   // TODO: Send Web Push using a WebPush library with VAPID_PUBLIC_KEY & VAPID_PRIVATE_KEY
     // }
     
     console.log(`Computed Personal Day logic ready for execution.`);

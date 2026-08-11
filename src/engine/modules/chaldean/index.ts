@@ -9,11 +9,38 @@ export const ChaldeanMap: Record<string, number> = {
   f: 8, p: 8
 };
 
-export function calculateChaldeanValue(name: string): number {
+const vowels = new Set(['a', 'e', 'i', 'o', 'u', 'y']);
+
+export interface NameAnalysis {
+  expression: number;
+  soulUrge: number;
+  personality: number;
+  breakdown: Array<{ char: string, value: number }>;
+}
+
+export function analyzeChaldeanName(name: string): NameAnalysis {
   const normalized = name.toLowerCase().replace(/[^a-z]/g, '');
-  let sum = 0;
+  
+  let expression = 0;
+  let soulUrge = 0;
+  let personality = 0;
+  const breakdown: Array<{ char: string, value: number }> = [];
+
   for (const char of normalized) {
-    sum += ChaldeanMap[char] || 0;
+    const val = ChaldeanMap[char] || 0;
+    breakdown.push({ char, value: val });
+    
+    expression += val;
+    if (vowels.has(char)) {
+      soulUrge += val;
+    } else {
+      personality += val;
+    }
   }
-  return sum;
+
+  return { expression, soulUrge, personality, breakdown };
+}
+
+export function calculateChaldeanValue(name: string): number {
+  return analyzeChaldeanName(name).expression;
 }

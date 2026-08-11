@@ -8,9 +8,8 @@ import { InputProfile } from './engine/core/types';
 import { calculateLoShu, LoShuGridResult } from './engine/modules/loshu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
+import { playSolfeggio, playMicroFeedback } from './lib/audio';
 import './App.css';
-
-import { InstallPrompt } from './components/InstallPrompt';
 
 function App() {
   const [result, setResult] = useState<LoShuGridResult | null>(null);
@@ -18,6 +17,10 @@ function App() {
   const handleProfileSubmit = (profile: InputProfile) => {
     const calcResult = calculateLoShu(profile);
     setResult(calcResult);
+    
+    // Play micro-feedback and solfeggio based on Mulank
+    playMicroFeedback('success');
+    playSolfeggio(calcResult.psychic);
   };
 
   return (
