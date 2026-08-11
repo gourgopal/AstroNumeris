@@ -11,14 +11,17 @@ import type { LoShuGridResult } from './engine/modules/loshu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import { playSolfeggio, playMicroFeedback } from './lib/audio';
+import { generateExpandedProfile } from './engine/core';
+import type { ExpandedProfile } from './engine/core/types';
 import './App.css';
 
 function App() {
-  const [result, setResult] = useState<{ profile: InputProfile, grid: LoShuGridResult } | null>(null);
+  const [result, setResult] = useState<{ profile: InputProfile, grid: LoShuGridResult, expandedProfile: ExpandedProfile } | null>(null);
 
   const handleProfileSubmit = (profile: InputProfile) => {
     const calcResult = calculateLoShu(profile);
-    setResult({ profile, grid: calcResult });
+    const expandedProfile = generateExpandedProfile(profile);
+    setResult({ profile, grid: calcResult, expandedProfile });
     
     // Play micro-feedback and solfeggio based on Mulank
     playMicroFeedback('success');
@@ -68,8 +71,12 @@ function App() {
               </button>
               
               <LoShuGrid result={result.grid} />
-              <NumerologyInsights profile={result.profile} grid={result.grid} />
-              <DownloadReportButton result={result.grid} />
+              <NumerologyInsights profile={result.profile} expandedProfile={result.expandedProfile} />
+              <DownloadReportButton 
+                grid={result.grid} 
+                profile={result.profile} 
+                expandedProfile={result.expandedProfile} 
+              />
               <NameTuner mulank={result.grid.psychic} bhagyank={result.grid.destiny} initialName={result.profile.name} />
             </motion.div>
           )}
