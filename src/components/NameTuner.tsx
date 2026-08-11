@@ -21,7 +21,6 @@ export const NameTuner: React.FC<NameTunerProps> = ({ mulank, bhagyank }) => {
   
   // Harmony Check: if Expression matches Mulank or Bhagyank
   const isHarmonious = activeSingle === mulank || activeSingle === bhagyank;
-  const isNeutral = !isHarmonious && (activeSingle > 0);
 
   // Remedy Suggestion Engine: Brute-force adding common vowels
   const commonAdditions = ['a', 'e', 'i', 'o', 'u'];

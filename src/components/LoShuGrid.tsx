@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { LoShuGridResult } from '../engine/modules/loshu';
+import type { LoShuGridResult } from '../engine/modules/loshu';
 
 interface LoShuGridProps {
   result: LoShuGridResult;
@@ -37,8 +37,8 @@ export const LoShuGrid: React.FC<LoShuGridProps> = ({ result }) => {
       </h2>
       
       <div className="grid grid-cols-3 gap-2 w-full max-w-[300px] mb-8">
-        {GRID_LAYOUT.map((row, rowIndex) => (
-          row.map((cellNum, colIndex) => {
+        {GRID_LAYOUT.map((row) => (
+          row.map((cellNum) => {
             const count = digitCounts[cellNum] || 0;
             const display = count > 0 ? String(cellNum).repeat(count) : '';
             return (

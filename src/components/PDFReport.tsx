@@ -1,6 +1,6 @@
 import React from 'react';
 import { Document, Page, Text, View, StyleSheet, PDFDownloadLink } from '@react-pdf/renderer';
-import { LoShuGridResult } from '../engine/modules/loshu';
+import type { LoShuGridResult } from '../engine/modules/loshu';
 import { getNumberDetail } from '../engine/data';
 
 const styles = StyleSheet.create({
@@ -118,6 +118,6 @@ export const DownloadReportButton: React.FC<{ result: LoShuGridResult }> = ({ re
     fileName="AstroNumeris-Report.pdf"
     className="mt-4 px-6 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-colors font-medium shadow-[0_0_15px_rgba(16,185,129,0.3)]"
   >
-    {({ blob, url, loading, error }) => (loading ? 'Generating Report...' : 'Download Full PDF Report')}
+    {({ loading }) => (loading ? 'Generating Report...' : 'Download Full PDF Report')}
   </PDFDownloadLink>
 );

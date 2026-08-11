@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { InputForm } from './components/InputForm';
 import { LoShuGrid } from './components/LoShuGrid';
 import { InstallPrompt } from './components/InstallPrompt';
 import { DownloadReportButton } from './components/PDFReport';
 import { NameTuner } from './components/NameTuner';
-import { InputProfile } from './engine/core/types';
-import { calculateLoShu, LoShuGridResult } from './engine/modules/loshu';
+import type { InputProfile } from './engine/core/types';
+import { calculateLoShu } from './engine/modules/loshu';
+import type { LoShuGridResult } from './engine/modules/loshu';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import { playSolfeggio, playMicroFeedback } from './lib/audio';

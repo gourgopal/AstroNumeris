@@ -1,64 +1,72 @@
 /**
- * Cloudflare Worker for Daily Push Notifications
- * Scheduled to run daily via CRON trigger.
+ * Cloudflare Worker for Hourly Push Notifications
+ * Computes Personal Day Number based on User's local timezone
  */
 
 export interface Env {
-  // KV Namespace binding for stored push subscriptions
   PUSH_SUBSCRIPTIONS: KVNamespace;
   VAPID_PUBLIC_KEY: string;
   VAPID_PRIVATE_KEY: string;
-}
-
-// Basic math reduction for numerology
-function reduceToSingleDigit(num: number): number {
-  if (num < 10) return num;
-  let sum = 0;
-  let temp = num;
-  while (temp > 0) {
-    sum += temp % 10;
-    temp = Math.floor(temp / 10);
-  }
-  return reduceToSingleDigit(sum);
+  VAPID_SUBJECT: string;
 }
 
 export default {
-  // The scheduled handler is invoked by Cloudflare CRON triggers
   async scheduled(controller: ScheduledController, env: Env, ctx: ExecutionContext) {
-    console.log('Cron trigger executed:', controller.cron);
+    console.log('Hourly Cron trigger executed:', controller.cron);
     
-    // Example logic to fetch users and compute Personal Day Number
-    const today = new Date();
-    const currentDay = today.getUTCDate();
-    const currentMonth = today.getUTCMonth() + 1; // 1-12
+    // Cloudflare KV list can be paginated, keeping simple for now
+    const { keys } = await env.PUSH_SUBSCRIPTIONS.list();
     
-    // In a real scenario, you'd iterate over all subscriptions in KV
-    // For now, we simulate pulling a single subscription with a Mulank
-    // const subscriptions = await env.PUSH_SUBSCRIPTIONS.list();
-    // for (const key of subscriptions.keys) {
-    //   const userData = await env.PUSH_SUBSCRIPTIONS.get(key.name, "json");
-    //   const mulank = userData.mulank;
-    //   
-    //   // Personal Day logic: (Day + Month + Mulank) % 9 || 9
-    //   let personalDay = (currentDay + currentMonth + mulank) % 9;
-    //   if (personalDay === 0) personalDay = 9;
-    //
-    //   // TODO: Send Web Push using a WebPush library with VAPID_PUBLIC_KEY & VAPID_PRIVATE_KEY
-    // }
-    
-    console.log(`Computed Personal Day logic ready for execution.`);
+    for (const key of keys) {
+      const dataStr = await env.PUSH_SUBSCRIPTIONS.get(key.name);
+      if (!dataStr) continue;
+      
+      try {
+        const userData = JSON.parse(dataStr);
+        const tzOffset = userData.tzOffset || 0; // expected in hours (e.g. 5.5 for IST)
+        
+        const now = new Date();
+        const localTimeMs = now.getTime() + tzOffset * 3600 * 1000;
+        const localTime = new Date(localTimeMs);
+        
+        const localHour = localTime.getUTCHours();
+        
+        // We want to send notifications at exactly 9:00 AM local time
+        if (localHour === 9) {
+          const currentDay = localTime.getUTCDate();
+          const currentMonth = localTime.getUTCMonth() + 1; // 1-12
+          const mulank = userData.mulank || 1;
+          
+          let personalDay = (currentDay + currentMonth + mulank) % 9;
+          if (personalDay === 0) personalDay = 9;
+          
+          console.log(`Would send Web Push to ${key.name}: Personal Day ${personalDay}`);
+          
+          // TODO: Implement web-push protocol request here using VAPID keys from env
+        }
+      } catch (err) {
+        console.error('Error processing subscription:', key.name, err);
+      }
+    }
   },
 
-  // Also expose a fetch handler to register new subscriptions
   async fetch(request: Request, env: Env, ctx: ExecutionContext) {
     if (request.method === 'POST') {
-      const body: any = await request.json();
-      if (body.endpoint && body.keys && body.mulank) {
-        // Store subscription keyed by endpoint or unique ID
-        await env.PUSH_SUBSCRIPTIONS.put(body.endpoint, JSON.stringify(body));
-        return new Response('Subscription saved.', { status: 200 });
+      try {
+        const body: any = await request.json();
+        if (body.endpoint && body.keys && body.mulank) {
+          // Calculate client tzOffset in hours based on their Date object or send directly
+          // For now, accept tzOffset from payload, default to 0
+          const tzOffset = body.tzOffset || 0; 
+          const payload = { ...body, tzOffset };
+          
+          // Use endpoint as unique key
+          await env.PUSH_SUBSCRIPTIONS.put(body.endpoint, JSON.stringify(payload));
+          return new Response('Subscription saved.', { status: 200 });
+        }
+      } catch (e) {
+        return new Response('Invalid JSON payload.', { status: 400 });
       }
-      return new Response('Invalid payload.', { status: 400 });
     }
     
     return new Response('Notifications worker active. Use POST to subscribe.', { status: 200 });

@@ -1,7 +1,4 @@
-export enum Gender {
-  Male = 'Male',
-  Female = 'Female'
-}
+export type Gender = 'Male' | 'Female';
 
 export interface InputProfile {
   name: string;

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Gender, InputProfile } from '../engine/core/types';
+import type { Gender, InputProfile } from '../engine/core/types';
 
 interface InputFormProps {
   onSubmit: (profile: InputProfile) => void;
@@ -9,7 +9,7 @@ interface InputFormProps {
 export const InputForm: React.FC<InputFormProps> = ({ onSubmit }) => {
   const [name, setName] = useState('');
   const [dob, setDob] = useState('');
-  const [gender, setGender] = useState<Gender>(Gender.Male);
+  const [gender, setGender] = useState<Gender>('Male');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,8 +61,8 @@ export const InputForm: React.FC<InputFormProps> = ({ onSubmit }) => {
             onChange={e => setGender(e.target.value as Gender)} 
             className="px-4 py-2 bg-black/30 border border-white/20 rounded-lg focus:outline-none focus:border-purple-500 text-white transition-colors [&>option]:bg-gray-900"
           >
-            <option value={Gender.Male}>Male</option>
-            <option value={Gender.Female}>Female</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
           </select>
         </div>
 
