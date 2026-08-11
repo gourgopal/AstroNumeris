@@ -60,6 +60,7 @@ function App() {
               </button>
               
               <LoShuGrid result={result} />
+              <DownloadReportButton result={result} />
             </motion.div>
           )}
         </AnimatePresence>
