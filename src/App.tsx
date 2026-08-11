@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import './App.css';
 
+import { InstallPrompt } from './components/InstallPrompt';
+
 function App() {
   const [result, setResult] = useState<LoShuGridResult | null>(null);
 
@@ -17,6 +19,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#050510] text-gray-100 flex flex-col items-center p-4 sm:p-8 relative overflow-hidden">
+      <InstallPrompt />
       {/* Cosmic background effects */}
       <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-purple-900/30 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[60%] h-[60%] bg-indigo-900/20 rounded-full blur-[150px] pointer-events-none" />
