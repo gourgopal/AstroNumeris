@@ -1,296 +1,1215 @@
 {
-    "numbers": {
+  "numbers": {
+    "1": {
+      "planet": "Sun",
+      "traits": "Leadership, ambition, originality, freedom-loving",
+      "strengths": "Confident, determined, independent",
+      "weaknesses": "Can be arrogant or egotistic if imbalanced"
+    },
+    "2": {
+      "planet": "Moon",
+      "traits": "Cooperation, diplomacy, emotional sensitivity",
+      "strengths": "Supportive, intuitive, adaptive",
+      "weaknesses": "Mood swings, indecisiveness"
+    },
+    "3": {
+      "planet": "Jupiter",
+      "traits": "Creative, expressive, knowledge-loving",
+      "strengths": "Optimistic, communicative, spiritual inclinations",
+      "weaknesses": "Scattered energy, can be egotistical"
+    },
+    "4": {
+      "planet": "Rahu",
+      "traits": "Organizer, disciplined, rebel, logical",
+      "strengths": "Hard-working, systematic, strong sense of justice",
+      "weaknesses": "Stubborn, struggles with sudden changes"
+    },
+    "5": {
+      "planet": "Mercury",
+      "traits": "Freedom, adaptability, fun-loving, communication",
+      "strengths": "Versatile, quick-witted, resourceful",
+      "weaknesses": "Restless, easily bored, superficial at times"
+    },
+    "6": {
+      "planet": "Venus",
+      "traits": "Luxury, family, harmony, romance",
+      "strengths": "Artistic, diplomatic, caring",
+      "weaknesses": "Manipulative, overindulgent, vain"
+    },
+    "7": {
+      "planet": "Ketu",
+      "traits": "Introspective, spiritual, analytical",
+      "strengths": "Deep thinker, researcher, wise",
+      "weaknesses": "Aloof, skeptical, can feel lonely"
+    },
+    "8": {
+      "planet": "Saturn",
+      "traits": "Power, money management, practicality",
+      "strengths": "Hardworking, authoritative, determined",
+      "weaknesses": "Late success, can appear cold, struggles in relationships"
+    },
+    "9": {
+      "planet": "Mars",
+      "traits": "Courage, passion, drive, warrior mindset",
+      "strengths": "Strong willpower, philanthropic, energetic",
+      "weaknesses": "Impulsive, anger issues, unpredictable"
+    }
+  },
+  "compatibilityMatrix": {
+    "1": {
+      "friends": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        9
+      ],
+      "enemies": [
+        8
+      ],
+      "neutrals": [
+        4,
+        7
+      ]
+    },
+    "2": {
+      "friends": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "enemies": [
+        4,
+        8,
+        9
+      ],
+      "neutrals": [
+        6,
+        7
+      ]
+    },
+    "3": {
+      "friends": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "enemies": [
+        6
+      ],
+      "neutrals": [
+        4,
+        7,
+        8,
+        9
+      ]
+    },
+    "4": {
+      "friends": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "enemies": [
+        2,
+        4,
+        8,
+        9
+      ],
+      "neutrals": [
+        3
+      ]
+    },
+    "5": {
+      "friends": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "enemies": [],
+      "neutrals": [
+        4,
+        7,
+        8,
+        9
+      ]
+    },
+    "6": {
+      "friends": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "enemies": [
+        3
+      ],
+      "neutrals": [
+        2,
+        4,
+        8,
+        9
+      ]
+    },
+    "7": {
+      "friends": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "enemies": [],
+      "neutrals": [
+        2,
+        7,
+        8,
+        9
+      ]
+    },
+    "8": {
+      "friends": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "enemies": [
+        1,
+        2
+      ],
+      "neutrals": [
+        9
+      ]
+    },
+    "9": {
+      "friends": [
+        1,
+        3,
+        5
+      ],
+      "enemies": [
+        2,
+        4
+      ],
+      "neutrals": [
+        6,
+        7,
+        8,
+        9
+      ]
+    }
+  },
+  "personalYears": {
+    "1": {
+      "keyword": "New Beginnings",
+      "positive": "High energy, new ventures, fresh start, big achievements",
+      "negative": "Ego, impatience, can have conflicts if not careful"
+    },
+    "2": {
+      "keyword": "Cooperation and Growth",
+      "positive": "Resolve old conflicts, diplomacy, forming partnerships",
+      "negative": "Emotional sensitivity, moodiness, overthinking"
+    },
+    "3": {
+      "keyword": "Social Expansion",
+      "positive": "Fun, creativity, self-expression, networking",
+      "negative": "Scattered energy, show-off, overspending"
+    },
+    "4": {
+      "keyword": "Work and Discipline",
+      "positive": "Hard work, stability, building foundations",
+      "negative": "Stress, rigidity, feeling restricted"
+    },
+    "5": {
+      "keyword": "Change and Freedom",
+      "positive": "Adventure, expansion, promotions, new opportunities",
+      "negative": "Restlessness, impulsiveness, sudden upheavals"
+    },
+    "6": {
+      "keyword": "Responsibility and Balance",
+      "positive": "Family focus, love, marriage, creative expression",
+      "negative": "Overburden, financial strain, vanity"
+    },
+    "7": {
+      "keyword": "Spiritual and Analytical",
+      "positive": "Deep reflection, research, self-improvement",
+      "negative": "Isolation, self-doubt, overthinking"
+    },
+    "8": {
+      "keyword": "Material Achievement",
+      "positive": "Financial gains, business success, power and status",
+      "negative": "Greed, heavy burdens, karmic lessons"
+    },
+    "9": {
+      "keyword": "Completion and Transformation",
+      "positive": "End of cycles, humanitarian focus, letting go of old baggage",
+      "negative": "Conflicts, impulsive behavior, frustration if resisting change"
+    }
+  },
+  "eightOneCombinations": {
+    "1": {
       "1": {
-        "planet": "Sun",
-        "traits": "Leadership, ambition, originality, freedom-loving",
-        "strengths": "Confident, determined, independent",
-        "weaknesses": "Can be arrogant or egotistic if imbalanced"
+        "title": "Driver 1 - Conductor 1",
+        "synergyRating": 3,
+        "traits": "Fortunate, very lucky, supportive mentors, success in life",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "2": {
-        "planet": "Moon",
-        "traits": "Cooperation, diplomacy, emotional sensitivity",
-        "strengths": "Supportive, intuitive, adaptive",
-        "weaknesses": "Mood swings, indecisiveness"
+        "title": "Driver 1 - Conductor 2",
+        "synergyRating": 3,
+        "traits": "Success in water-related fields or fluid careers",
+        "careerPaths": [
+          "water"
+        ]
       },
       "3": {
-        "planet": "Jupiter",
-        "traits": "Creative, expressive, knowledge-loving",
-        "strengths": "Optimistic, communicative, spiritual inclinations",
-        "weaknesses": "Scattered energy, can be egotistical"
+        "title": "Driver 1 - Conductor 3",
+        "synergyRating": 3,
+        "traits": "Success in teaching, occult, or creative expression",
+        "careerPaths": [
+          "teaching"
+        ]
       },
       "4": {
-        "planet": "Rahu",
-        "traits": "Organizer, disciplined, rebel, logical",
-        "strengths": "Hard-working, systematic, strong sense of justice",
-        "weaknesses": "Stubborn, struggles with sudden changes"
+        "title": "Driver 1 - Conductor 4",
+        "synergyRating": 3,
+        "traits": "Authoritative + clever, good for politics",
+        "careerPaths": [
+          "politics"
+        ]
       },
       "5": {
-        "planet": "Mercury",
-        "traits": "Freedom, adaptability, fun-loving, communication",
-        "strengths": "Versatile, quick-witted, resourceful",
-        "weaknesses": "Restless, easily bored, superficial at times"
+        "title": "Driver 1 - Conductor 5",
+        "synergyRating": 3,
+        "traits": "Success in every field, especially finance, share market",
+        "careerPaths": [
+          "finance"
+        ]
       },
       "6": {
-        "planet": "Venus",
-        "traits": "Luxury, family, harmony, romance",
-        "strengths": "Artistic, diplomatic, caring",
-        "weaknesses": "Manipulative, overindulgent, vain"
+        "title": "Driver 1 - Conductor 6",
+        "synergyRating": 3,
+        "traits": "Luxury, hotel or fashion industry, glamor/film",
+        "careerPaths": [
+          "glamor"
+        ]
       },
       "7": {
-        "planet": "Ketu",
-        "traits": "Introspective, spiritual, analytical",
-        "strengths": "Deep thinker, researcher, wise",
-        "weaknesses": "Aloof, skeptical, can feel lonely"
+        "title": "Driver 1 - Conductor 7",
+        "synergyRating": 3,
+        "traits": "Wisdom-based, good for occult research",
+        "careerPaths": [
+          "occult"
+        ]
       },
       "8": {
-        "planet": "Saturn",
-        "traits": "Power, money management, practicality",
-        "strengths": "Hardworking, authoritative, determined",
-        "weaknesses": "Late success, can appear cold, struggles in relationships"
+        "title": "Driver 1 - Conductor 8",
+        "synergyRating": 3,
+        "traits": "Challenging synergy, marriage/life struggles, health issues",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "9": {
-        "planet": "Mars",
-        "traits": "Courage, passion, drive, warrior mindset",
-        "strengths": "Strong willpower, philanthropic, energetic",
-        "weaknesses": "Impulsive, anger issues, unpredictable"
+        "title": "Driver 1 - Conductor 9",
+        "synergyRating": 5,
+        "traits": "Superstar combination (Mukesh Ambani example), big success",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       }
     },
-  
-    "compatibilityMatrix": {
+    "2": {
       "1": {
-        "friends": [1, 2, 3, 5, 6, 9],
-        "enemies": [8],
-        "neutrals": [4, 7]
+        "title": "Driver 2 - Conductor 1",
+        "synergyRating": 3,
+        "traits": "Successful, though slightly less synergy than 1–1",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "2": {
-        "friends": [1, 2, 3, 5],
-        "enemies": [4, 8, 9],
-        "neutrals": [6, 7]
+        "title": "Driver 2 - Conductor 2",
+        "synergyRating": 3,
+        "traits": "Hurdles, but strong potential in water fields",
+        "careerPaths": [
+          "water"
+        ]
       },
       "3": {
-        "friends": [1, 2, 3, 5],
-        "enemies": [6],
-        "neutrals": [4, 7, 8, 9]
+        "title": "Driver 2 - Conductor 3",
+        "synergyRating": 3,
+        "traits": "Teaching, banking, ups and downs due to Moon",
+        "careerPaths": [
+          "Teaching"
+        ]
       },
       "4": {
-        "friends": [1, 5, 6, 7],
-        "enemies": [2, 4, 8, 9],
-        "neutrals": [3]
+        "title": "Driver 2 - Conductor 4",
+        "synergyRating": 2,
+        "traits": "Struggle in life, possible depression",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "5": {
-        "friends": [1, 2, 3, 5, 6],
-        "enemies": [],
-        "neutrals": [4, 7, 8, 9]
+        "title": "Driver 2 - Conductor 5",
+        "synergyRating": 3,
+        "traits": "Real estate, finance, property deals",
+        "careerPaths": [
+          "Real estate"
+        ]
       },
       "6": {
-        "friends": [1, 5, 6, 7],
-        "enemies": [3],
-        "neutrals": [2, 4, 8, 9]
+        "title": "Driver 2 - Conductor 6",
+        "synergyRating": 3,
+        "traits": "Good combo, celebrations, catering, success after some hard work",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "7": {
-        "friends": [1, 3, 4, 5, 6],
-        "enemies": [],
-        "neutrals": [2, 7, 8, 9]
+        "title": "Driver 2 - Conductor 7",
+        "synergyRating": 3,
+        "traits": "Coaching, mentor, business, spiritual track",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "8": {
-        "friends": [3, 4, 5, 6, 7, 8],
-        "enemies": [1, 2],
-        "neutrals": [9]
+        "title": "Driver 2 - Conductor 8",
+        "synergyRating": 3,
+        "traits": "Mind flickering, health issues, less auspicious",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "9": {
-        "friends": [1, 3, 5],
-        "enemies": [2, 4],
-        "neutrals": [6, 7, 8, 9]
+        "title": "Driver 2 - Conductor 9",
+        "synergyRating": 3,
+        "traits": "Marriage problems, some emotional conflicts",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       }
     },
-  
-    "personalYears": {
+    "3": {
       "1": {
-        "keyword": "New Beginnings",
-        "positive": "High energy, new ventures, fresh start, big achievements",
-        "negative": "Ego, impatience, can have conflicts if not careful"
+        "title": "Driver 3 - Conductor 1",
+        "synergyRating": 3,
+        "traits": "80% chance of success, educational or administrative roles",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "2": {
-        "keyword": "Cooperation and Growth",
-        "positive": "Resolve old conflicts, diplomacy, forming partnerships",
-        "negative": "Emotional sensitivity, moodiness, overthinking"
+        "title": "Driver 3 - Conductor 2",
+        "synergyRating": 3,
+        "traits": "Banking, teaching, watery ups/downs",
+        "careerPaths": [
+          "teaching"
+        ]
       },
       "3": {
-        "keyword": "Social Expansion",
-        "positive": "Fun, creativity, self-expression, networking",
-        "negative": "Scattered energy, show-off, overspending"
+        "title": "Driver 3 - Conductor 3",
+        "synergyRating": 5,
+        "traits": "Best for education, brain-oriented, big growth",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "4": {
-        "keyword": "Work and Discipline",
-        "positive": "Hard work, stability, building foundations",
-        "negative": "Stress, rigidity, feeling restricted"
+        "title": "Driver 3 - Conductor 4",
+        "synergyRating": 3,
+        "traits": "40% synergy, but good for sales, marketing",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "5": {
-        "keyword": "Change and Freedom",
-        "positive": "Adventure, expansion, promotions, new opportunities",
-        "negative": "Restlessness, impulsiveness, sudden upheavals"
+        "title": "Driver 3 - Conductor 5",
+        "synergyRating": 3,
+        "traits": "75% synergy, communications, anchoring, radio jockey",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "6": {
-        "keyword": "Responsibility and Balance",
-        "positive": "Family focus, love, marriage, creative expression",
-        "negative": "Overburden, financial strain, vanity"
+        "title": "Driver 3 - Conductor 6",
+        "synergyRating": 2,
+        "traits": "Struggle, heart issues, personal friction",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "7": {
-        "keyword": "Spiritual and Analytical",
-        "positive": "Deep reflection, research, self-improvement",
-        "negative": "Isolation, self-doubt, overthinking"
+        "title": "Driver 3 - Conductor 7",
+        "synergyRating": 3,
+        "traits": "Occult, healing, yoga, deep knowledge synergy",
+        "careerPaths": [
+          "Occult"
+        ]
       },
       "8": {
-        "keyword": "Material Achievement",
-        "positive": "Financial gains, business success, power and status",
-        "negative": "Greed, heavy burdens, karmic lessons"
+        "title": "Driver 3 - Conductor 8",
+        "synergyRating": 3,
+        "traits": "Law, printing press, or real estate synergy",
+        "careerPaths": [
+          "Law"
+        ]
       },
       "9": {
-        "keyword": "Completion and Transformation",
-        "positive": "End of cycles, humanitarian focus, letting go of old baggage",
-        "negative": "Conflicts, impulsive behavior, frustration if resisting change"
+        "title": "Driver 3 - Conductor 9",
+        "synergyRating": 3,
+        "traits": "Army, politics, defense, strong synergy",
+        "careerPaths": [
+          "Army"
+        ]
       }
     },
-  
-    "eightOneCombinations": {
+    "4": {
       "1": {
-        "1": "Fortunate, very lucky, supportive mentors, success in life",
-        "2": "Success in water-related fields or fluid careers",
-        "3": "Success in teaching, occult, or creative expression",
-        "4": "Authoritative + clever, good for politics",
-        "5": "Success in every field, especially finance, share market",
-        "6": "Luxury, hotel or fashion industry, glamor/film",
-        "7": "Wisdom-based, good for occult research",
-        "8": "Challenging synergy, marriage/life struggles, health issues",
-        "9": "Superstar combination (Mukesh Ambani example), big success"
+        "title": "Driver 4 - Conductor 1",
+        "synergyRating": 5,
+        "traits": "Best for politics, get favors from bigger powers",
+        "careerPaths": [
+          "politics"
+        ]
       },
       "2": {
-        "1": "Successful, though slightly less synergy than 1–1",
-        "2": "Hurdles, but strong potential in water fields",
-        "3": "Teaching, banking, ups and downs due to Moon",
-        "4": "Struggle in life, possible depression",
-        "5": "Real estate, finance, property deals",
-        "6": "Good combo, celebrations, catering, success after some hard work",
-        "7": "Coaching, mentor, business, spiritual track",
-        "8": "Mind flickering, health issues, less auspicious",
-        "9": "Marriage problems, some emotional conflicts"
+        "title": "Driver 4 - Conductor 2",
+        "synergyRating": 2,
+        "traits": "Struggle, can face depression",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "3": {
-        "1": "80% chance of success, educational or administrative roles",
-        "2": "Banking, teaching, watery ups/downs",
-        "3": "Best for education, brain-oriented, big growth",
-        "4": "40% synergy, but good for sales, marketing",
-        "5": "75% synergy, communications, anchoring, radio jockey",
-        "6": "Struggle, heart issues, personal friction",
-        "7": "Occult, healing, yoga, deep knowledge synergy",
-        "8": "Law, printing press, or real estate synergy",
-        "9": "Army, politics, defense, strong synergy"
+        "title": "Driver 4 - Conductor 3",
+        "synergyRating": 3,
+        "traits": "Sales & marketing synergy, partial success",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "4": {
-        "1": "Best for politics, get favors from bigger powers",
-        "2": "Struggle, can face depression",
-        "3": "Sales & marketing synergy, partial success",
-        "4": "Law field possibility, or strong logic roles",
-        "5": "60% synergy, event management, technical fields",
-        "6": "Media, film, acting synergy, 60-70% luck",
-        "7": "Occult or technology, best synergy if harnessed properly",
-        "8": "Law field, 25-30% luck factor, or marketing if harnessed well",
-        "9": "Struggle, accidents, electronics failure, conflicts"
+        "title": "Driver 4 - Conductor 4",
+        "synergyRating": 3,
+        "traits": "Law field possibility, or strong logic roles",
+        "careerPaths": [
+          "Law"
+        ]
       },
       "5": {
-        "1": "Property, broad success in multiple fields",
-        "2": "Property or real estate synergy, fluid success",
-        "3": "Communication-based success, wide networks",
-        "4": "Sales, marketing, engineering, or medical success",
-        "5": "Very successful, can conquer laziness if balanced",
-        "6": "Excellent synergy for luxury, big leaps in life",
-        "7": "Occult, banking, partnership synergy",
-        "8": "Money management synergy, stable growth",
-        "9": "Any field, big success"
+        "title": "Driver 4 - Conductor 5",
+        "synergyRating": 3,
+        "traits": "60% synergy, event management, technical fields",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
       "6": {
-        "1": "Balanced synergy, success, supportive family life",
-        "2": "Late success after struggles, possible business in sweets",
-        "3": "Struggle synergy, avoid close business or marriage if tough numbers repeat",
-        "4": "Media/news synergy, partial good fortune",
-        "5": "Very strong synergy, no laziness, luxury fulfilled",
-        "6": "Actor, film industry, on-camera/behind-camera roles",
-        "7": "Excellent synergy for sports or romantic, spiritual life",
-        "8": "Judge/Law synergy, 70% luck factor",
-        "9": "Professional success but personal life conflict"
+        "title": "Driver 4 - Conductor 6",
+        "synergyRating": 4,
+        "traits": "Media, film, acting synergy, 60-70% luck",
+        "careerPaths": [
+          "Media"
+        ]
       },
       "7": {
-        "1": "Occult, yoga, reiki, astro, strong synergy",
-        "2": "Intuitive synergy, water-based, partial fluid",
-        "3": "Education, healing, doctor, yoga synergy",
-        "4": "Strong synergy in technology or research",
-        "5": "Business partnership synergy, multiple expansions",
-        "6": "Sports synergy, romance, flamboyance",
-        "7": "Disappointments in family, or lonely married life",
-        "8": "20% synergy, property or contractor potential",
-        "9": "Teaching, advanced knowledge synergy"
+        "title": "Driver 4 - Conductor 7",
+        "synergyRating": 3,
+        "traits": "Occult or technology, best synergy if harnessed properly",
+        "careerPaths": [
+          "Occult"
+        ]
       },
       "8": {
-        "1": "Tough synergy, marriage or health struggles",
-        "2": "Health issues, mental conflict",
-        "3": "40% synergy, can do law or marketing",
-        "4": "25-30% synergy, also law or marketing fields",
-        "5": "70% synergy, business in iron, property, real estate",
-        "6": "70% synergy, iron/property business, with family help",
-        "7": "40% synergy, advanced teaching or research",
-        "8": "Struggles but normal life in job, possible success in sports",
-        "9": "Army, police, guns synergy, strong sense of power"
+        "title": "Driver 4 - Conductor 8",
+        "synergyRating": 3,
+        "traits": "Law field, 25-30% luck factor, or marketing if harnessed well",
+        "careerPaths": [
+          "Law"
+        ]
       },
       "9": {
-        "1": "80-90% synergy, excellent for politics, big success",
-        "2": "Problems, marriage conflicts, but not much health issues",
-        "3": "Healing, education, counseling synergy",
-        "4": "Delayed success, health or electronics issues",
-        "5": "Strong synergy for career success, multiple fields",
-        "6": "Scandals, controversies, keep your ideas secret",
-        "7": "Teaching synergy, advanced knowledge path",
-        "8": "Army or authority synergy, loves power + iron",
-        "9": "Jealousy or extra marital issues if not balanced"
+        "title": "Driver 4 - Conductor 9",
+        "synergyRating": 2,
+        "traits": "Struggle, accidents, electronics failure, conflicts",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       }
     },
-  
-    "missingNumbers": {
-      "1": "Lack of independence or leadership, difficulty making decisions",
-      "2": "Struggles with cooperation, overly solitary, misses emotional warmth",
-      "3": "Weak creativity or low imagination, difficulty expressing ideas",
-      "4": "Lack of discipline or method, can be disorganized",
-      "5": "Life lacks change or variety, can get stuck in a rut or comfort zone",
-      "6": "Trouble with family/love life, might feel less sense of harmony",
-      "7": "Less spiritual insight, might not enjoy researching or deeper knowledge",
-      "8": "Poor money management, lacks material success or structure",
-      "9": "Less drive, less passion, might avoid big challenges or leadership roles"
+    "5": {
+      "1": {
+        "title": "Driver 5 - Conductor 1",
+        "synergyRating": 3,
+        "traits": "Property, broad success in multiple fields",
+        "careerPaths": [
+          "Property"
+        ]
+      },
+      "2": {
+        "title": "Driver 5 - Conductor 2",
+        "synergyRating": 3,
+        "traits": "Property or real estate synergy, fluid success",
+        "careerPaths": [
+          "Property"
+        ]
+      },
+      "3": {
+        "title": "Driver 5 - Conductor 3",
+        "synergyRating": 3,
+        "traits": "Communication-based success, wide networks",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "4": {
+        "title": "Driver 5 - Conductor 4",
+        "synergyRating": 3,
+        "traits": "Sales, marketing, engineering, or medical success",
+        "careerPaths": [
+          "engineering"
+        ]
+      },
+      "5": {
+        "title": "Driver 5 - Conductor 5",
+        "synergyRating": 4,
+        "traits": "Very successful, can conquer laziness if balanced",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "6": {
+        "title": "Driver 5 - Conductor 6",
+        "synergyRating": 5,
+        "traits": "Excellent synergy for luxury, big leaps in life",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "7": {
+        "title": "Driver 5 - Conductor 7",
+        "synergyRating": 3,
+        "traits": "Occult, banking, partnership synergy",
+        "careerPaths": [
+          "Occult"
+        ]
+      },
+      "8": {
+        "title": "Driver 5 - Conductor 8",
+        "synergyRating": 3,
+        "traits": "Money management synergy, stable growth",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "9": {
+        "title": "Driver 5 - Conductor 9",
+        "synergyRating": 3,
+        "traits": "Any field, big success",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      }
     },
-  
-    "planes": {
-      "Mind": {
-        "numbers": [4, 9, 2],
-        "description": "Mental plane: logic, creativity, family-oriented. Full set = genius. Missing any = partial logic or emotional friction."
+    "6": {
+      "1": {
+        "title": "Driver 6 - Conductor 1",
+        "synergyRating": 3,
+        "traits": "Balanced synergy, success, supportive family life",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
-      "Heart": {
-        "numbers": [3, 5, 7],
-        "description": "Emotional plane: satisfaction, communication, spiritual wisdom if balanced."
+      "2": {
+        "title": "Driver 6 - Conductor 2",
+        "synergyRating": 3,
+        "traits": "Late success after struggles, possible business in sweets",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
-      "Practical": {
-        "numbers": [8, 1, 6],
-        "description": "Material plane: finances, money management, luxury, authority."
+      "3": {
+        "title": "Driver 6 - Conductor 3",
+        "synergyRating": 2,
+        "traits": "Struggle synergy, avoid close business or marriage if tough numbers repeat",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
-      "Action": {
-        "numbers": [2, 7, 6],
-        "description": "Doer’s plane: seizes opportunities, acts quickly, can be prone to impulsive decisions if unbalanced."
+      "4": {
+        "title": "Driver 6 - Conductor 4",
+        "synergyRating": 3,
+        "traits": "Media/news synergy, partial good fortune",
+        "careerPaths": [
+          "Media"
+        ]
       },
-      "Thought": {
-        "numbers": [4, 3, 8],
-        "description": "Vision or Thought plane: planning, discipline, problem-solving, sometimes extremes of struggle or success."
+      "5": {
+        "title": "Driver 6 - Conductor 5",
+        "synergyRating": 3,
+        "traits": "Very strong synergy, no laziness, luxury fulfilled",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       },
-      "Will": {
-        "numbers": [9, 5, 1],
-        "description": "Success plane: strong willpower, bounce-back ability, loves praise, potentially dominant if repeated numbers are present."
+      "6": {
+        "title": "Driver 6 - Conductor 6",
+        "synergyRating": 3,
+        "traits": "Actor, film industry, on-camera/behind-camera roles",
+        "careerPaths": [
+          "film"
+        ]
+      },
+      "7": {
+        "title": "Driver 6 - Conductor 7",
+        "synergyRating": 5,
+        "traits": "Excellent synergy for sports or romantic, spiritual life",
+        "careerPaths": [
+          "sports"
+        ]
+      },
+      "8": {
+        "title": "Driver 6 - Conductor 8",
+        "synergyRating": 4,
+        "traits": "Judge/Law synergy, 70% luck factor",
+        "careerPaths": [
+          "Law"
+        ]
+      },
+      "9": {
+        "title": "Driver 6 - Conductor 9",
+        "synergyRating": 3,
+        "traits": "Professional success but personal life conflict",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      }
+    },
+    "7": {
+      "1": {
+        "title": "Driver 7 - Conductor 1",
+        "synergyRating": 3,
+        "traits": "Occult, yoga, reiki, astro, strong synergy",
+        "careerPaths": [
+          "Occult"
+        ]
+      },
+      "2": {
+        "title": "Driver 7 - Conductor 2",
+        "synergyRating": 3,
+        "traits": "Intuitive synergy, water-based, partial fluid",
+        "careerPaths": [
+          "water"
+        ]
+      },
+      "3": {
+        "title": "Driver 7 - Conductor 3",
+        "synergyRating": 3,
+        "traits": "Education, healing, doctor, yoga synergy",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "4": {
+        "title": "Driver 7 - Conductor 4",
+        "synergyRating": 4,
+        "traits": "Strong synergy in technology or research",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "5": {
+        "title": "Driver 7 - Conductor 5",
+        "synergyRating": 3,
+        "traits": "Business partnership synergy, multiple expansions",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "6": {
+        "title": "Driver 7 - Conductor 6",
+        "synergyRating": 3,
+        "traits": "Sports synergy, romance, flamboyance",
+        "careerPaths": [
+          "Sports"
+        ]
+      },
+      "7": {
+        "title": "Driver 7 - Conductor 7",
+        "synergyRating": 3,
+        "traits": "Disappointments in family, or lonely married life",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "8": {
+        "title": "Driver 7 - Conductor 8",
+        "synergyRating": 3,
+        "traits": "20% synergy, property or contractor potential",
+        "careerPaths": [
+          "property"
+        ]
+      },
+      "9": {
+        "title": "Driver 7 - Conductor 9",
+        "synergyRating": 3,
+        "traits": "Teaching, advanced knowledge synergy",
+        "careerPaths": [
+          "Teaching"
+        ]
+      }
+    },
+    "8": {
+      "1": {
+        "title": "Driver 8 - Conductor 1",
+        "synergyRating": 2,
+        "traits": "Tough synergy, marriage or health struggles",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "2": {
+        "title": "Driver 8 - Conductor 2",
+        "synergyRating": 3,
+        "traits": "Health issues, mental conflict",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "3": {
+        "title": "Driver 8 - Conductor 3",
+        "synergyRating": 3,
+        "traits": "40% synergy, can do law or marketing",
+        "careerPaths": [
+          "law"
+        ]
+      },
+      "4": {
+        "title": "Driver 8 - Conductor 4",
+        "synergyRating": 3,
+        "traits": "25-30% synergy, also law or marketing fields",
+        "careerPaths": [
+          "law"
+        ]
+      },
+      "5": {
+        "title": "Driver 8 - Conductor 5",
+        "synergyRating": 4,
+        "traits": "70% synergy, business in iron, property, real estate",
+        "careerPaths": [
+          "iron"
+        ]
+      },
+      "6": {
+        "title": "Driver 8 - Conductor 6",
+        "synergyRating": 4,
+        "traits": "70% synergy, iron/property business, with family help",
+        "careerPaths": [
+          "iron"
+        ]
+      },
+      "7": {
+        "title": "Driver 8 - Conductor 7",
+        "synergyRating": 3,
+        "traits": "40% synergy, advanced teaching or research",
+        "careerPaths": [
+          "teaching"
+        ]
+      },
+      "8": {
+        "title": "Driver 8 - Conductor 8",
+        "synergyRating": 2,
+        "traits": "Struggles but normal life in job, possible success in sports",
+        "careerPaths": [
+          "sports"
+        ]
+      },
+      "9": {
+        "title": "Driver 8 - Conductor 9",
+        "synergyRating": 3,
+        "traits": "Army, police, guns synergy, strong sense of power",
+        "careerPaths": [
+          "Army"
+        ]
+      }
+    },
+    "9": {
+      "1": {
+        "title": "Driver 9 - Conductor 1",
+        "synergyRating": 5,
+        "traits": "80-90% synergy, excellent for politics, big success",
+        "careerPaths": [
+          "politics"
+        ]
+      },
+      "2": {
+        "title": "Driver 9 - Conductor 2",
+        "synergyRating": 1,
+        "traits": "Problems, marriage conflicts, but not much health issues",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "3": {
+        "title": "Driver 9 - Conductor 3",
+        "synergyRating": 3,
+        "traits": "Healing, education, counseling synergy",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "4": {
+        "title": "Driver 9 - Conductor 4",
+        "synergyRating": 3,
+        "traits": "Delayed success, health or electronics issues",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "5": {
+        "title": "Driver 9 - Conductor 5",
+        "synergyRating": 4,
+        "traits": "Strong synergy for career success, multiple fields",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "6": {
+        "title": "Driver 9 - Conductor 6",
+        "synergyRating": 3,
+        "traits": "Scandals, controversies, keep your ideas secret",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
+      },
+      "7": {
+        "title": "Driver 9 - Conductor 7",
+        "synergyRating": 3,
+        "traits": "Teaching synergy, advanced knowledge path",
+        "careerPaths": [
+          "Teaching"
+        ]
+      },
+      "8": {
+        "title": "Driver 9 - Conductor 8",
+        "synergyRating": 3,
+        "traits": "Army or authority synergy, loves power + iron",
+        "careerPaths": [
+          "Army"
+        ]
+      },
+      "9": {
+        "title": "Driver 9 - Conductor 9",
+        "synergyRating": 3,
+        "traits": "Jealousy or extra marital issues if not balanced",
+        "careerPaths": [
+          "General Business",
+          "Administration"
+        ]
       }
     }
+  },
+  "missingNumbers": {
+    "1": "Lack of independence or leadership, difficulty making decisions",
+    "2": "Struggles with cooperation, overly solitary, misses emotional warmth",
+    "3": "Weak creativity or low imagination, difficulty expressing ideas",
+    "4": "Lack of discipline or method, can be disorganized",
+    "5": "Life lacks change or variety, can get stuck in a rut or comfort zone",
+    "6": "Trouble with family/love life, might feel less sense of harmony",
+    "7": "Less spiritual insight, might not enjoy researching or deeper knowledge",
+    "8": "Poor money management, lacks material success or structure",
+    "9": "Less drive, less passion, might avoid big challenges or leadership roles"
+  },
+  "planes": {
+    "Mind": {
+      "numbers": [
+        4,
+        9,
+        2
+      ],
+      "description": "Mental plane: logic, creativity, family-oriented. Full set = genius. Missing any = partial logic or emotional friction.",
+      "type": "Horizontal"
+    },
+    "Heart": {
+      "numbers": [
+        3,
+        5,
+        7
+      ],
+      "description": "Emotional plane: satisfaction, communication, spiritual wisdom if balanced.",
+      "type": "Horizontal"
+    },
+    "Practical": {
+      "numbers": [
+        8,
+        1,
+        6
+      ],
+      "description": "Material plane: finances, money management, luxury, authority.",
+      "type": "Horizontal"
+    },
+    "Action": {
+      "numbers": [
+        2,
+        7,
+        6
+      ],
+      "description": "Doer’s plane: seizes opportunities, acts quickly, can be prone to impulsive decisions if unbalanced.",
+      "type": "Vertical"
+    },
+    "Thought": {
+      "numbers": [
+        4,
+        3,
+        8
+      ],
+      "description": "Vision or Thought plane: planning, discipline, problem-solving, sometimes extremes of struggle or success.",
+      "type": "Vertical"
+    },
+    "Will": {
+      "numbers": [
+        9,
+        5,
+        1
+      ],
+      "description": "Success plane: strong willpower, bounce-back ability, loves praise, potentially dominant if repeated numbers are present.",
+      "type": "Vertical"
+    },
+    "Golden Yog": {
+      "numbers": [
+        4,
+        5,
+        6
+      ],
+      "description": "Golden Yog (Rajyog 1): Represents excellent luck, name, fame, and wealth. Brings immense success, stability, and abundance.",
+      "type": "Diagonal"
+    },
+    "Silver Yog": {
+      "numbers": [
+        2,
+        5,
+        8
+      ],
+      "description": "Silver Yog (Rajyog 2): Represents prosperity through property and real estate. Brings strong endurance, emotional grounding, and continuous growth.",
+      "type": "Diagonal"
+    }
+  },
+  "pinnacles": {
+    "1": "Individuality, independence, leadership. Focus on building confidence.",
+    "2": "Cooperation, patience, partnerships. Sensitivity and diplomacy are key.",
+    "3": "Creativity, self-expression, communication. A time for joy and social expansion.",
+    "4": "Hard work, discipline, building a solid foundation. Demands patience and effort.",
+    "5": "Freedom, change, adventure. Expect unexpected shifts and new opportunities.",
+    "6": "Family, responsibility, harmony. Focus on domestic life, marriage, or community.",
+    "7": "Spiritual growth, inner reflection, study. A time for gaining deep knowledge.",
+    "8": "Material success, business, authority. Financial gains and power dynamics.",
+    "9": "Completion, letting go, humanitarianism. Endings pave the way for new beginnings."
+  },
+  "mobileCompatibility": {
+    "1": {
+      "friendly": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        9
+      ],
+      "neutral": [
+        4,
+        7
+      ],
+      "enemy": [
+        8
+      ]
+    },
+    "2": {
+      "friendly": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "neutral": [
+        6,
+        7
+      ],
+      "enemy": [
+        4,
+        8,
+        9
+      ]
+    },
+    "3": {
+      "friendly": [
+        1,
+        2,
+        3,
+        5,
+        7
+      ],
+      "neutral": [
+        4,
+        8,
+        9
+      ],
+      "enemy": [
+        6
+      ]
+    },
+    "4": {
+      "friendly": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "neutral": [
+        3
+      ],
+      "enemy": [
+        2,
+        4,
+        8,
+        9
+      ]
+    },
+    "5": {
+      "friendly": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "neutral": [
+        4,
+        7,
+        8,
+        9
+      ],
+      "enemy": []
+    },
+    "6": {
+      "friendly": [
+        1,
+        5,
+        6,
+        7
+      ],
+      "neutral": [
+        2,
+        4,
+        8,
+        9
+      ],
+      "enemy": [
+        3
+      ]
+    },
+    "7": {
+      "friendly": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "neutral": [
+        2,
+        7,
+        8,
+        9
+      ],
+      "enemy": []
+    },
+    "8": {
+      "friendly": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "neutral": [
+        9
+      ],
+      "enemy": [
+        1,
+        2
+      ]
+    },
+    "9": {
+      "friendly": [
+        1,
+        3,
+        5
+      ],
+      "neutral": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "enemy": [
+        2,
+        4
+      ]
+    }
   }
-  
+}

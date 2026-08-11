@@ -99,7 +99,7 @@ export function generateExpandedProfile(profile: InputProfile): ExpandedProfile 
   const challengeCycles: ChallengeCycle = {
     firstCycle,
     secondCycle,
-    thirdCycle: firstCycle + secondCycle,
+    thirdCycle: reduceToSingleDigit(firstCycle + secondCycle),
     fourthCycle: reduceToSingleDigit(year + month),
     firstCycleAgeUpto: 36 - destiny,
     secondCycleAgeUpto: (36 - destiny) + 9,
@@ -159,7 +159,7 @@ export function generateExpandedProfile(profile: InputProfile): ExpandedProfile 
 
   // Planes
   const planeDefs: Record<string, number[]> = {
-    Golden: [4, 5, 6], Silver: [2, 5, 8], Mind: [4, 9, 2], Heart: [3, 5, 7],
+    "Golden Yog": [4, 5, 6], "Silver Yog": [2, 5, 8], Mind: [4, 9, 2], Heart: [3, 5, 7],
     Practical: [8, 1, 6], Thought: [4, 3, 8], Will: [9, 5, 1], Action: [2, 7, 6]
   };
   const planes = Object.keys(planeDefs).filter(k => planeDefs[k].every(v => finalGridNumbers.includes(v)));

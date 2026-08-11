@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import type { InputProfile } from '../engine/core/types';
 import type { ExpandedProfile } from '../engine/core/types';
 import { numerologyData, getNumberDetail } from '../engine/data';
+import { MobileChecker } from './MobileChecker';
 
 interface NumerologyInsightsProps {
   profile: InputProfile;
@@ -10,7 +11,7 @@ interface NumerologyInsightsProps {
 }
 
 export const NumerologyInsights: React.FC<NumerologyInsightsProps> = ({ expandedProfile }) => {
-  const [activeTab, setActiveTab] = useState<'core' | 'planes' | 'name' | 'cycles'>('core');
+  const [activeTab, setActiveTab] = useState<'core' | 'planes' | 'name' | 'cycles' | 'mobile'>('core');
   
   const mulankDetail = getNumberDetail(expandedProfile.psychic);
   const currentYear = new Date().getFullYear();
@@ -33,6 +34,7 @@ export const NumerologyInsights: React.FC<NumerologyInsightsProps> = ({ expanded
         <TabButton active={activeTab === 'planes'} onClick={() => setActiveTab('planes')} label="Planes & Grid" />
         <TabButton active={activeTab === 'name'} onClick={() => setActiveTab('name')} label="Name Analysis" />
         <TabButton active={activeTab === 'cycles'} onClick={() => setActiveTab('cycles')} label="Life Cycles" />
+        <TabButton active={activeTab === 'mobile'} onClick={() => setActiveTab('mobile')} label="Mobile Numerology" />
       </div>
 
       <div className="min-h-[400px]">
@@ -97,10 +99,19 @@ export const NumerologyInsights: React.FC<NumerologyInsightsProps> = ({ expanded
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {expandedProfile.planes.map(p => {
                       const desc = numerologyData.planes[p as keyof typeof numerologyData.planes];
+                      const isGolden = p === "Golden Yog";
+                      const isSilver = p === "Silver Yog";
+                      const glowClass = isGolden ? "border-yellow-500/60 shadow-[0_0_15px_rgba(234,179,8,0.3)] bg-yellow-900/20" : 
+                                        isSilver ? "border-gray-300/60 shadow-[0_0_15px_rgba(209,213,219,0.2)] bg-gray-700/30" : 
+                                        "border-indigo-500/20 bg-black/40";
+                      const titleColor = isGolden ? "text-yellow-400" : isSilver ? "text-gray-200" : "text-indigo-200";
+
                       return (
-                        <div key={p} className="p-3 bg-black/40 rounded-lg border border-indigo-500/20">
-                          <h4 className="text-indigo-200 font-semibold">{p} Plane</h4>
-                          <p className="text-xs text-gray-400 mt-1">{desc?.description}</p>
+                        <div key={p} className={`p-4 rounded-xl border ${glowClass} transition-all`}>
+                          <h4 className={`${titleColor} font-bold text-lg mb-1 flex items-center gap-2`}>
+                            {p} {(isGolden || isSilver) && '✦'}
+                          </h4>
+                          <p className="text-xs text-gray-300 leading-relaxed">{desc?.description}</p>
                         </div>
                       )
                     })}
@@ -214,6 +225,12 @@ export const NumerologyInsights: React.FC<NumerologyInsightsProps> = ({ expanded
                 </div>
               </div>
 
+            </motion.div>
+          )}
+
+          {activeTab === 'mobile' && (
+            <motion.div key="mobile" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 10 }}>
+              <MobileChecker mulank={expandedProfile.psychic} bhagyank={expandedProfile.destiny} />
             </motion.div>
           )}
         </AnimatePresence>

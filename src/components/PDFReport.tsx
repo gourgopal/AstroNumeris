@@ -213,6 +213,53 @@ const ReportDocument: React.FC<ReportProps> = ({ profile, expandedProfile, grid 
         </View>
 
         <Text style={styles.footer} render={({ pageNumber, totalPages }) => (`Page ${pageNumber} of ${totalPages}`)} fixed />
+        <Text style={styles.footer} render={({ pageNumber, totalPages }) => (`Page ${pageNumber} of ${totalPages}`)} fixed />
+      </Page>
+
+      {/* Page 3: Planes & Yogs */}
+      <Page size="A4" style={styles.page}>
+        <View style={styles.header}>
+          <Text style={styles.logo}>✦ AstroNumeris ✦</Text>
+          <Text style={styles.subtitle}>Advanced Analysis</Text>
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Planes & Yogs</Text>
+          {expandedProfile.planes.length === 0 ? (
+            <Text style={styles.text}>No specific planes formed in the core grid.</Text>
+          ) : (
+            expandedProfile.planes.map(p => {
+              const desc = numerologyData.planes[p as keyof typeof numerologyData.planes];
+              return (
+                <View key={p} style={{ marginBottom: 10 }}>
+                  <Text style={[styles.text, { color: p.includes('Yog') ? cosmicCyan : cosmicPurple, fontWeight: 'bold' }]}>
+                    {p} {p.includes('Yog') ? '✦' : ''}
+                  </Text>
+                  <Text style={styles.text}>{desc?.description}</Text>
+                </View>
+              );
+            })
+          )}
+        </View>
+
+        <View style={styles.section}>
+          <Text style={styles.sectionTitle}>Driver & Conductor Synergy (81 Combos)</Text>
+          {(() => {
+            const comboInfo = (numerologyData as any).eightOneCombinations?.[psychic]?.[destiny];
+            if (comboInfo) {
+              return (
+                <View>
+                  <Text style={styles.text}>Driver {psychic} - Conductor {destiny}</Text>
+                  <Text style={styles.text}>Synergy Rating: <Text style={styles.bold}>{comboInfo.synergyRating} / 5</Text></Text>
+                  <Text style={styles.text}>{comboInfo.traits}</Text>
+                </View>
+              );
+            }
+            return <Text style={styles.text}>Detailed synergy information not available.</Text>;
+          })()}
+        </View>
+
+        <Text style={styles.footer} render={({ pageNumber, totalPages }) => (`Page ${pageNumber} of ${totalPages}`)} fixed />
       </Page>
     </Document>
   );
