@@ -1,6 +1,7 @@
 import React from 'react';
 import { Document, Page, Text, View, StyleSheet, PDFDownloadLink } from '@react-pdf/renderer';
 import { LoShuGridResult } from '../engine/modules/loshu';
+import { getNumberDetail } from '../engine/data';
 
 const styles = StyleSheet.create({
   page: {
@@ -97,6 +98,14 @@ const ReportDocument: React.FC<{ result: LoShuGridResult }> = ({ result }) => {
               <View style={styles.cell}><Text>{getCellDisplay(6)}</Text></View>
             </View>
           </View>
+
+          <Text style={[styles.subtitle, { marginTop: 20 }]}>Interpretations</Text>
+          <Text style={[styles.text, { fontWeight: 'bold' }]}>Psychic Number ({psychic}) - {getNumberDetail(psychic)?.planet}:</Text>
+          <Text style={styles.text}>{getNumberDetail(psychic)?.traits}</Text>
+          
+          <Text style={[styles.text, { fontWeight: 'bold', marginTop: 10 }]}>Destiny Number ({destiny}) - {getNumberDetail(destiny)?.planet}:</Text>
+          <Text style={styles.text}>{getNumberDetail(destiny)?.traits}</Text>
+
         </View>
       </Page>
     </Document>

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { InputForm } from './components/InputForm';
 import { LoShuGrid } from './components/LoShuGrid';
+import { InstallPrompt } from './components/InstallPrompt';
+import { DownloadReportButton } from './components/PDFReport';
+import { NameTuner } from './components/NameTuner';
 import { InputProfile } from './engine/core/types';
 import { calculateLoShu, LoShuGridResult } from './engine/modules/loshu';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -61,6 +64,7 @@ function App() {
               
               <LoShuGrid result={result} />
               <DownloadReportButton result={result} />
+              <NameTuner mulank={result.psychic} bhagyank={result.destiny} />
             </motion.div>
           )}
         </AnimatePresence>

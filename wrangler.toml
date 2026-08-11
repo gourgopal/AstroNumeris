@@ -1,0 +1,12 @@
+name = "astronumeris-notifications"
+main = "workers/cron-notifications.ts"
+compatibility_date = "2023-12-01"
+
+# Run everyday at 8:00 AM UTC
+[triggers]
+crons = ["0 8 * * *"]
+
+# KV Namespace binding (Uncomment and add your ID after creating one)
+# [[kv_namespaces]]
+# binding = "PUSH_SUBSCRIPTIONS"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
