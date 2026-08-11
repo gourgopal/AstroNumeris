@@ -1,0 +1,296 @@
+{
+    "numbers": {
+      "1": {
+        "planet": "Sun",
+        "traits": "Leadership, ambition, originality, freedom-loving",
+        "strengths": "Confident, determined, independent",
+        "weaknesses": "Can be arrogant or egotistic if imbalanced"
+      },
+      "2": {
+        "planet": "Moon",
+        "traits": "Cooperation, diplomacy, emotional sensitivity",
+        "strengths": "Supportive, intuitive, adaptive",
+        "weaknesses": "Mood swings, indecisiveness"
+      },
+      "3": {
+        "planet": "Jupiter",
+        "traits": "Creative, expressive, knowledge-loving",
+        "strengths": "Optimistic, communicative, spiritual inclinations",
+        "weaknesses": "Scattered energy, can be egotistical"
+      },
+      "4": {
+        "planet": "Rahu",
+        "traits": "Organizer, disciplined, rebel, logical",
+        "strengths": "Hard-working, systematic, strong sense of justice",
+        "weaknesses": "Stubborn, struggles with sudden changes"
+      },
+      "5": {
+        "planet": "Mercury",
+        "traits": "Freedom, adaptability, fun-loving, communication",
+        "strengths": "Versatile, quick-witted, resourceful",
+        "weaknesses": "Restless, easily bored, superficial at times"
+      },
+      "6": {
+        "planet": "Venus",
+        "traits": "Luxury, family, harmony, romance",
+        "strengths": "Artistic, diplomatic, caring",
+        "weaknesses": "Manipulative, overindulgent, vain"
+      },
+      "7": {
+        "planet": "Ketu",
+        "traits": "Introspective, spiritual, analytical",
+        "strengths": "Deep thinker, researcher, wise",
+        "weaknesses": "Aloof, skeptical, can feel lonely"
+      },
+      "8": {
+        "planet": "Saturn",
+        "traits": "Power, money management, practicality",
+        "strengths": "Hardworking, authoritative, determined",
+        "weaknesses": "Late success, can appear cold, struggles in relationships"
+      },
+      "9": {
+        "planet": "Mars",
+        "traits": "Courage, passion, drive, warrior mindset",
+        "strengths": "Strong willpower, philanthropic, energetic",
+        "weaknesses": "Impulsive, anger issues, unpredictable"
+      }
+    },
+  
+    "compatibilityMatrix": {
+      "1": {
+        "friends": [1, 2, 3, 5, 6, 9],
+        "enemies": [8],
+        "neutrals": [4, 7]
+      },
+      "2": {
+        "friends": [1, 2, 3, 5],
+        "enemies": [4, 8, 9],
+        "neutrals": [6, 7]
+      },
+      "3": {
+        "friends": [1, 2, 3, 5],
+        "enemies": [6],
+        "neutrals": [4, 7, 8, 9]
+      },
+      "4": {
+        "friends": [1, 5, 6, 7],
+        "enemies": [2, 4, 8, 9],
+        "neutrals": [3]
+      },
+      "5": {
+        "friends": [1, 2, 3, 5, 6],
+        "enemies": [],
+        "neutrals": [4, 7, 8, 9]
+      },
+      "6": {
+        "friends": [1, 5, 6, 7],
+        "enemies": [3],
+        "neutrals": [2, 4, 8, 9]
+      },
+      "7": {
+        "friends": [1, 3, 4, 5, 6],
+        "enemies": [],
+        "neutrals": [2, 7, 8, 9]
+      },
+      "8": {
+        "friends": [3, 4, 5, 6, 7, 8],
+        "enemies": [1, 2],
+        "neutrals": [9]
+      },
+      "9": {
+        "friends": [1, 3, 5],
+        "enemies": [2, 4],
+        "neutrals": [6, 7, 8, 9]
+      }
+    },
+  
+    "personalYears": {
+      "1": {
+        "keyword": "New Beginnings",
+        "positive": "High energy, new ventures, fresh start, big achievements",
+        "negative": "Ego, impatience, can have conflicts if not careful"
+      },
+      "2": {
+        "keyword": "Cooperation and Growth",
+        "positive": "Resolve old conflicts, diplomacy, forming partnerships",
+        "negative": "Emotional sensitivity, moodiness, overthinking"
+      },
+      "3": {
+        "keyword": "Social Expansion",
+        "positive": "Fun, creativity, self-expression, networking",
+        "negative": "Scattered energy, show-off, overspending"
+      },
+      "4": {
+        "keyword": "Work and Discipline",
+        "positive": "Hard work, stability, building foundations",
+        "negative": "Stress, rigidity, feeling restricted"
+      },
+      "5": {
+        "keyword": "Change and Freedom",
+        "positive": "Adventure, expansion, promotions, new opportunities",
+        "negative": "Restlessness, impulsiveness, sudden upheavals"
+      },
+      "6": {
+        "keyword": "Responsibility and Balance",
+        "positive": "Family focus, love, marriage, creative expression",
+        "negative": "Overburden, financial strain, vanity"
+      },
+      "7": {
+        "keyword": "Spiritual and Analytical",
+        "positive": "Deep reflection, research, self-improvement",
+        "negative": "Isolation, self-doubt, overthinking"
+      },
+      "8": {
+        "keyword": "Material Achievement",
+        "positive": "Financial gains, business success, power and status",
+        "negative": "Greed, heavy burdens, karmic lessons"
+      },
+      "9": {
+        "keyword": "Completion and Transformation",
+        "positive": "End of cycles, humanitarian focus, letting go of old baggage",
+        "negative": "Conflicts, impulsive behavior, frustration if resisting change"
+      }
+    },
+  
+    "eightOneCombinations": {
+      "1": {
+        "1": "Fortunate, very lucky, supportive mentors, success in life",
+        "2": "Success in water-related fields or fluid careers",
+        "3": "Success in teaching, occult, or creative expression",
+        "4": "Authoritative + clever, good for politics",
+        "5": "Success in every field, especially finance, share market",
+        "6": "Luxury, hotel or fashion industry, glamor/film",
+        "7": "Wisdom-based, good for occult research",
+        "8": "Challenging synergy, marriage/life struggles, health issues",
+        "9": "Superstar combination (Mukesh Ambani example), big success"
+      },
+      "2": {
+        "1": "Successful, though slightly less synergy than 1–1",
+        "2": "Hurdles, but strong potential in water fields",
+        "3": "Teaching, banking, ups and downs due to Moon",
+        "4": "Struggle in life, possible depression",
+        "5": "Real estate, finance, property deals",
+        "6": "Good combo, celebrations, catering, success after some hard work",
+        "7": "Coaching, mentor, business, spiritual track",
+        "8": "Mind flickering, health issues, less auspicious",
+        "9": "Marriage problems, some emotional conflicts"
+      },
+      "3": {
+        "1": "80% chance of success, educational or administrative roles",
+        "2": "Banking, teaching, watery ups/downs",
+        "3": "Best for education, brain-oriented, big growth",
+        "4": "40% synergy, but good for sales, marketing",
+        "5": "75% synergy, communications, anchoring, radio jockey",
+        "6": "Struggle, heart issues, personal friction",
+        "7": "Occult, healing, yoga, deep knowledge synergy",
+        "8": "Law, printing press, or real estate synergy",
+        "9": "Army, politics, defense, strong synergy"
+      },
+      "4": {
+        "1": "Best for politics, get favors from bigger powers",
+        "2": "Struggle, can face depression",
+        "3": "Sales & marketing synergy, partial success",
+        "4": "Law field possibility, or strong logic roles",
+        "5": "60% synergy, event management, technical fields",
+        "6": "Media, film, acting synergy, 60-70% luck",
+        "7": "Occult or technology, best synergy if harnessed properly",
+        "8": "Law field, 25-30% luck factor, or marketing if harnessed well",
+        "9": "Struggle, accidents, electronics failure, conflicts"
+      },
+      "5": {
+        "1": "Property, broad success in multiple fields",
+        "2": "Property or real estate synergy, fluid success",
+        "3": "Communication-based success, wide networks",
+        "4": "Sales, marketing, engineering, or medical success",
+        "5": "Very successful, can conquer laziness if balanced",
+        "6": "Excellent synergy for luxury, big leaps in life",
+        "7": "Occult, banking, partnership synergy",
+        "8": "Money management synergy, stable growth",
+        "9": "Any field, big success"
+      },
+      "6": {
+        "1": "Balanced synergy, success, supportive family life",
+        "2": "Late success after struggles, possible business in sweets",
+        "3": "Struggle synergy, avoid close business or marriage if tough numbers repeat",
+        "4": "Media/news synergy, partial good fortune",
+        "5": "Very strong synergy, no laziness, luxury fulfilled",
+        "6": "Actor, film industry, on-camera/behind-camera roles",
+        "7": "Excellent synergy for sports or romantic, spiritual life",
+        "8": "Judge/Law synergy, 70% luck factor",
+        "9": "Professional success but personal life conflict"
+      },
+      "7": {
+        "1": "Occult, yoga, reiki, astro, strong synergy",
+        "2": "Intuitive synergy, water-based, partial fluid",
+        "3": "Education, healing, doctor, yoga synergy",
+        "4": "Strong synergy in technology or research",
+        "5": "Business partnership synergy, multiple expansions",
+        "6": "Sports synergy, romance, flamboyance",
+        "7": "Disappointments in family, or lonely married life",
+        "8": "20% synergy, property or contractor potential",
+        "9": "Teaching, advanced knowledge synergy"
+      },
+      "8": {
+        "1": "Tough synergy, marriage or health struggles",
+        "2": "Health issues, mental conflict",
+        "3": "40% synergy, can do law or marketing",
+        "4": "25-30% synergy, also law or marketing fields",
+        "5": "70% synergy, business in iron, property, real estate",
+        "6": "70% synergy, iron/property business, with family help",
+        "7": "40% synergy, advanced teaching or research",
+        "8": "Struggles but normal life in job, possible success in sports",
+        "9": "Army, police, guns synergy, strong sense of power"
+      },
+      "9": {
+        "1": "80-90% synergy, excellent for politics, big success",
+        "2": "Problems, marriage conflicts, but not much health issues",
+        "3": "Healing, education, counseling synergy",
+        "4": "Delayed success, health or electronics issues",
+        "5": "Strong synergy for career success, multiple fields",
+        "6": "Scandals, controversies, keep your ideas secret",
+        "7": "Teaching synergy, advanced knowledge path",
+        "8": "Army or authority synergy, loves power + iron",
+        "9": "Jealousy or extra marital issues if not balanced"
+      }
+    },
+  
+    "missingNumbers": {
+      "1": "Lack of independence or leadership, difficulty making decisions",
+      "2": "Struggles with cooperation, overly solitary, misses emotional warmth",
+      "3": "Weak creativity or low imagination, difficulty expressing ideas",
+      "4": "Lack of discipline or method, can be disorganized",
+      "5": "Life lacks change or variety, can get stuck in a rut or comfort zone",
+      "6": "Trouble with family/love life, might feel less sense of harmony",
+      "7": "Less spiritual insight, might not enjoy researching or deeper knowledge",
+      "8": "Poor money management, lacks material success or structure",
+      "9": "Less drive, less passion, might avoid big challenges or leadership roles"
+    },
+  
+    "planes": {
+      "Mind": {
+        "numbers": [4, 9, 2],
+        "description": "Mental plane: logic, creativity, family-oriented. Full set = genius. Missing any = partial logic or emotional friction."
+      },
+      "Heart": {
+        "numbers": [3, 5, 7],
+        "description": "Emotional plane: satisfaction, communication, spiritual wisdom if balanced."
+      },
+      "Practical": {
+        "numbers": [8, 1, 6],
+        "description": "Material plane: finances, money management, luxury, authority."
+      },
+      "Action": {
+        "numbers": [2, 7, 6],
+        "description": "Doer’s plane: seizes opportunities, acts quickly, can be prone to impulsive decisions if unbalanced."
+      },
+      "Thought": {
+        "numbers": [4, 3, 8],
+        "description": "Vision or Thought plane: planning, discipline, problem-solving, sometimes extremes of struggle or success."
+      },
+      "Will": {
+        "numbers": [9, 5, 1],
+        "description": "Success plane: strong willpower, bounce-back ability, loves praise, potentially dominant if repeated numbers are present."
+      }
+    }
+  }
+  
