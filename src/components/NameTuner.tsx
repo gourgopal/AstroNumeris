@@ -7,10 +7,11 @@ import { reduceToSingleDigit } from '../engine/core/calculator';
 interface NameTunerProps {
   mulank: number;
   bhagyank: number;
+  initialName?: string;
 }
 
-export const NameTuner: React.FC<NameTunerProps> = ({ mulank, bhagyank }) => {
-  const [name, setName] = useState('');
+export const NameTuner: React.FC<NameTunerProps> = ({ mulank, bhagyank, initialName = '' }) => {
+  const [name, setName] = useState(initialName);
   const [system, setSystem] = useState<'chaldean'|'pythagorean'>('chaldean');
 
   const chaldean = analyzeChaldeanName(name);

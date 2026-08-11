@@ -4,6 +4,7 @@ import { LoShuGrid } from './components/LoShuGrid';
 import { InstallPrompt } from './components/InstallPrompt';
 import { DownloadReportButton } from './components/PDFReport';
 import { NameTuner } from './components/NameTuner';
+import { NumerologyInsights } from './components/NumerologyInsights';
 import type { InputProfile } from './engine/core/types';
 import { calculateLoShu } from './engine/modules/loshu';
 import type { LoShuGridResult } from './engine/modules/loshu';
@@ -13,11 +14,11 @@ import { playSolfeggio, playMicroFeedback } from './lib/audio';
 import './App.css';
 
 function App() {
-  const [result, setResult] = useState<LoShuGridResult | null>(null);
+  const [result, setResult] = useState<{ profile: InputProfile, grid: LoShuGridResult } | null>(null);
 
   const handleProfileSubmit = (profile: InputProfile) => {
     const calcResult = calculateLoShu(profile);
-    setResult(calcResult);
+    setResult({ profile, grid: calcResult });
     
     // Play micro-feedback and solfeggio based on Mulank
     playMicroFeedback('success');
@@ -66,9 +67,10 @@ function App() {
                 ← Calculate another profile
               </button>
               
-              <LoShuGrid result={result} />
-              <DownloadReportButton result={result} />
-              <NameTuner mulank={result.psychic} bhagyank={result.destiny} />
+              <LoShuGrid result={result.grid} />
+              <NumerologyInsights profile={result.profile} grid={result.grid} />
+              <DownloadReportButton result={result.grid} />
+              <NameTuner mulank={result.grid.psychic} bhagyank={result.grid.destiny} initialName={result.profile.name} />
             </motion.div>
           )}
         </AnimatePresence>

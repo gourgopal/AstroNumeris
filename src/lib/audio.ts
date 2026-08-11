@@ -47,8 +47,8 @@ export const playSolfeggio = (mulank: number, durationSeconds = 5) => {
 
   // Envelope: Fade in, sustain, fade out
   gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
-  gainNode.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + 1); // Fade in 1s
-  gainNode.gain.linearRampToValueAtTime(0.3, audioCtx.currentTime + durationSeconds - 1); // Sustain
+  gainNode.gain.linearRampToValueAtTime(0.05, audioCtx.currentTime + 1); // Fade in 1s
+  gainNode.gain.linearRampToValueAtTime(0.05, audioCtx.currentTime + durationSeconds - 1); // Sustain
   gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + durationSeconds); // Fade out 1s
 
   osc.connect(gainNode);
@@ -91,8 +91,8 @@ export const playMicroFeedback = (type: 'click' | 'success' | 'toggle' = 'click'
     osc.type = 'sine';
     osc.frequency.setValueAtTime(600, audioCtx.currentTime);
     osc.frequency.exponentialRampToValueAtTime(300, audioCtx.currentTime + 0.1);
-    gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+    gainNode.gain.setValueAtTime(0.02, audioCtx.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
     osc.start();
     osc.stop(audioCtx.currentTime + 0.1);
   } else if (type === 'success') {
@@ -100,15 +100,15 @@ export const playMicroFeedback = (type: 'click' | 'success' | 'toggle' = 'click'
     osc.frequency.setValueAtTime(440, audioCtx.currentTime);
     osc.frequency.setValueAtTime(554.37, audioCtx.currentTime + 0.1);
     osc.frequency.setValueAtTime(659.25, audioCtx.currentTime + 0.2);
-    gainNode.gain.setValueAtTime(0.1, audioCtx.currentTime);
+    gainNode.gain.setValueAtTime(0.02, audioCtx.currentTime);
     gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.4);
     osc.start();
     osc.stop(audioCtx.currentTime + 0.4);
   } else if (type === 'toggle') {
     osc.type = 'square';
     osc.frequency.setValueAtTime(300, audioCtx.currentTime);
-    gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.15);
+    gainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
     osc.start();
     osc.stop(audioCtx.currentTime + 0.15);
   }
